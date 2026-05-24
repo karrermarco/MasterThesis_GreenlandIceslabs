@@ -70,3 +70,16 @@ To fully reproduce the findings, statistical metrics, and regional figures of th
 * **File:** `GAM_Analysis_MT_Karrer.ipynb`
 * **Purpose:** Implements and trains a `LinearGAM` framework using a Gaussian error distribution family.  Systematically tests individual relationships against ice slab thickness for five core variables: Surface Water Probability, Elevation, Flow Alignment, Ice Velocity, and Strain Rate.
  * **Statistical Output:** Extracts the pseudo-$R^2$ metric to determine the proportion of variance explained in ice slab thickness by the covariates. Generates 2x2 grids of Partial Dependence Plots mapping the non-linear regression curves with 95% shaded confidence intervals.
+
+
+---
+
+## 3. Installation & Dependency Requirements
+
+The spatial processing and statistical operations within this pipeline were compiled and evaluated inside a Python 3.11 environment utilizing the Jupyter Lab interface. 
+
+To initialize the compute environment and install all necessary geospatial, machine learning, and regression libraries, execute the following commands in your terminal:
+
+```bash
+pip install numpy pandas scipy matplotlib seaborn scikit-learn
+pip install rasterio geopandas libpysal esda pygam

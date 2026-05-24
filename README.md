@@ -1,15 +1,10 @@
-# Investigating the Link between GreenlandFirn Structure and the Hydrological SurfaceNetwork
+# Investigating the Link between Greenland Firn Structure and the Hydrological Surface Network
+
+The analysis explores the complex interactions between ice slabs and surface meltwater accumulation, as well as the driving forces behind ice slab evolution, utilizing localized spatial corelations and non-linear regression frameworks (GAMs) across five regional regions of the Greenland Ice Sheet (SW, CW, NW, NO, NE).
 
 This repository contains the complete computational workflow, data preprocessing pipelines, and spatial/non-spatial statistical models developed for the Master's Thesis: 
 "Investigating the Link between Greenland Firn Structure and the Hydrological Surface Network".
-
-The analysis explores the complex interactions between thick subsurface ice layers (ice slabs) and surface meltwater accumulation, as well as the driving forces behind ice slab evolution, utilizing localized spatial econometrics and non-linear regression frameworks (GAMs) across five regional sectors of the Greenland Ice Sheet (SW, CW, NW, NO, NE).
-
-# Statistical Analysis of Ice Slabs, Surface Hydrology, and Ice Flow Alignment on the Greenland Ice Sheet
-
-## Introduction & Scientific Context
-Global climate warming is especially noticeable in Arctic regions. Since the 1990s, meltwater runoff from the Greenland Ice Sheet has drastically increased, contributing significantly to global sea-level rise. Concurrently, a rapid propagation of low-permeability ice slabs has developed in the shallow firn. This occurs when excess meltwater percolates into the firn and refreezes within the pore space, creating solid ice layers that restrict further vertical percolation. This causes a critical regime shift: instead of being retained in the firn, additional meltwater remains near the surface—forming supraglacial lakes, rivers, and slush fields—and runs off directly into the ocean.
-While a link between surface meltwater occurrence and ice slab thickness has been proposed, it had not yet been statistically validated. This study conducts a comprehensive statistical analysis across five regional sectors of the Greenland Ice Sheet (**SW, CW, NW, NO, NE**) to evaluate these dynamics. 
+ 
 
 ### Core Findings of this Pipeline:
 * **Spatial Clustering (Bivariate Moran's I):** The findings indicate a high degree of spatial correlation between the probability of surface meltwater occurrence and ice slab thickness in three out of five regions, and a moderate correlation in the remaining two, reflecting a systematic physical coupling.

@@ -43,8 +43,7 @@ The tree below illustrates the required logical architecture.
     |-- Moran_Approach1/
     |-- Moran_Approach2/
 
-```text
----
+```
 
 ## 2. Computational Workflow & Execution Order
 

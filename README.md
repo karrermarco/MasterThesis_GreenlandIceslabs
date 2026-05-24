@@ -49,17 +49,15 @@ The tree below illustrates the required logical architecture.
 
 To fully reproduce the findings, statistical metrics, and regional figures of the thesis, the Jupyter Notebooks must be executed in the following chronological sequence. The pipeline moves from exploratory data synchronization to spatial autocorrelation modeling, geographic alignment validation, and final multivariate non-linear regression.
 
-### Step 1: Spatial Grid Association & Exploratory Analysis
+### Step 1: Spatial Grid Association & Autocorrelation (Mean Approach)
 * **File:** `Moran_Approach1_MT_Karrer.ipynb`
-* **Purpose:** Handles initial data loading, coordinate matching, and data cleaning across the regional subsets. It downscales the ice slab spatial fields, filters out invalid system noise, and performs initial global parametric and non-parametric correlation tests (Pearson and Spearman coefficients) between ice thickness variables and surface hydrology buffers.
+* **Methodology (Regional Aggregation):** Implements the **Mean Approach** for data merging. For each ice slab measurement point $i$, a 1 km radius buffer is delineated. The script calculates the mean probability of surface meltwater occurrence and the mean ice slab thickness for all data points within this area (requiring a minimum threshold of $\ge 50$ points per buffer).
+* **Statistical Output:** Computes parametric and non-parametric correlations (Pearson/Spearman) and spatial dependencies on a regionally smoothed scale. Adds the aggregated columns `hydro_1km_mean` and `ice_1km_mean` to the dataset.
 
-### Step 2: Localized Bivariate Spatial Autocorrelation
+### Step 2: Localized Spatial Autocorrelation (Exact Approach)
 * **File:** `Moran_Approach2_MT_Karrer.ipynb`
-* **Purpose:** Models spatial dependencies using a **Local Bivariate Moran's I** framework (`Moran_Local_BV`).
-  * Spatially lagged structures are computed via a K-Nearest Neighbors ($k$-NN) weight matrix using a fast geographic `sklearn.neighbors.BallTree` lookup.
-  * Conditional pseudo-$p$-values ($p_{sim}$) are derived via a stochastic engine running **999 random spatial permutations**.
-  * Classifies grid cells into statistically significant spatial clusters: **High-High (Hotspots)**, **Low-Low (Coldspots)**, spatial outliers (LH, HL), and non-significant domains. The results are exported as vectorized GeoPackages (`.gpkg`) for geospatial mapping in QGIS.
-
+* **Methodology (Point-Based Context):** Implements the **Exact Approach** for data merging. It identifies the exact hydrology pixel for each individual ice slab measurement point $i$. To account for glaciological ice motion, the search window is expanded to a $7 \times 7$ pixel neighborhood (210 m x 210 m), extracting the maximum hydrology value from these 49 pixels into a new column called `hydrology_value_buffer`.
+* **Statistical Output:** Models localized spatial dependencies using a **Local Bivariate Moran's I** framework (`Moran_Local_BV`). Spatial weight structures are constructed via a K-Nearest Neighbors ($k$-NN) matrix using an `sklearn.neighbors.BallTree` lookup. Significance is validated via **999 random spatial permutations** to classify grid cells into spatial clusters (High-High Hotspots, Low-Low Coldspots). Results are exported as vectorized GeoPackages (`.gpkg`).
 ### Step 3: Topographic and Ice Flow Direction Alignment Analysis
 * **File:** `Flow_Alignment_Analysis_MT_Karrer-Copy1.ipynb`
 * **Purpose:** Investigates whether the spatial hotspot clusters exhibit distinct ice flow physics.

@@ -87,16 +87,24 @@ pip install numpy pandas scipy matplotlib seaborn rasterio geopandas libpysal es
 
 ## 4. Primary Data Sources & References
 
-Due to spatial raster file sizes and institutional data licensing restrictions, the raw geographic layers are excluded from this repository. To replicate the analysis, the source datasets must be acquired from the following official repositories:
+To replicate the analysis, the source datasets must be acquired from the following official repositories:
 
-1. **Topography & Flow Alignment (ArcticDEM):** The angular difference layer is derived from the maximum topographic slope direction based on the ArcticDEM dataset provided by the Polar Geospatial Center (PGC).
+1. **Ice Slab Thickness:** The ice slab thickness measurements aquired across the five regional sectors (SW, CW, NW, NO, NE) can be downloaded on the data repository of Jullien et al. (2023). (https://doi.org/10.5281/zenodo.7505426)
+  
+2. **Surface Hydrology Dataset (Tedstone 2022):** The surface hydrology map utilized for the thesis is built upon the multi-year mean surface meltwater occurrence. The data was made available by Tedstone and Machguth (2022).
+   * *Dataset Reference:* Tedstone, A. J. and Machguth, H. (2022). Increasing surface runoff from greenland’s firn areas. Nature Climate Change, 12(7):672–676.
+
+3. **ArcticDEM:** The angular difference layer is derived from the maximum topographic slope direction based on the ArcticDEM dataset provided by the Polar Geospatial Center (PGC).
    * *Source Repository:* [https://www.pgc.umn.edu/data/arcticdem/](https://www.pgc.umn.edu/data/arcticdem/)
+  
+4. **Ice Flow Velocity and Strain Rate:** The surface velocity magnitude grids and derived tensor strain rates used as multivariate covariates are sourced from the satellite-derived ice velocity archives.
+   * *Source Repository:* National Snow and Ice Data Center (NSIDC) / MEaSUREs Greenland Ice Sheet Velocity Map Data.
+()
 
-2. **Surface Hydrology Dataset (Tedstone 2022):** The spatial hydrology baseline utilized for the Mean and Exact approaches is built upon the multi-year mean surface meltwater probability map.
-   * *Dataset Reference:* Tedstone, A. J. (2022). Global Greenland Ice Sheet Mean Surface Meltwater Probability Map.
 
-3. **Subsurface Ice Slab Thickness Maps (Jullien et al. 2023):** The baseline ice slab thickness vectors partitioned across the five regional sectors (SW, CW, NW, NO, NE) are acquired from the official data repository for Greenland firn structural mapping.
-   * *Source Repository (Zenodo):* [https://doi.org/10.5281/zenodo.7505426](https://doi.org/10.5281/zenodo.7505426)
+### Core Literature References:
+
+
 
 ### Core Literature References:
 * **Jullien, N., Tedstone, A. J., Machguth, H., Karlsson, N. B., & Helm, V. (2023):** *Greenland Ice Slab Expansion and Thickening*, Geophysical Research Letters.

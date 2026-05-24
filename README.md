@@ -81,5 +81,23 @@ The spatial processing and statistical operations within this pipeline were comp
 To initialize the compute environment and install all necessary geospatial, machine learning, and regression libraries, execute the following commands in your terminal:
 
 ```bash
-pip install numpy pandas scipy matplotlib seaborn scikit-learn
-pip install rasterio geopandas libpysal esda pygam
+pip install numpy pandas scipy matplotlib seaborn rasterio geopandas libpysal esda pygam
+```
+---
+
+## 4. Primary Data Sources & References
+
+Due to spatial raster file sizes and institutional data licensing restrictions, the raw geographic layers are excluded from this repository. To replicate the analysis, the source datasets must be acquired from the following official repositories:
+
+1. **Topography & Flow Alignment (ArcticDEM):** The angular difference layer is derived from the maximum topographic slope direction based on the ArcticDEM dataset provided by the Polar Geospatial Center (PGC).
+   * *Source Repository:* [https://www.pgc.umn.edu/data/arcticdem/](https://www.pgc.umn.edu/data/arcticdem/)
+
+2. **Surface Hydrology Dataset (Tedstone 2022):** The spatial hydrology baseline utilized for the Mean and Exact approaches is built upon the multi-year mean surface meltwater probability map.
+   * *Dataset Reference:* Tedstone, A. J. (2022). Global Greenland Ice Sheet Mean Surface Meltwater Probability Map.
+
+3. **Subsurface Ice Slab Thickness Maps (Jullien et al. 2023):** The baseline ice slab thickness vectors partitioned across the five regional sectors (SW, CW, NW, NO, NE) are acquired from the official data repository for Greenland firn structural mapping.
+   * *Source Repository (Zenodo):* [https://doi.org/10.5281/zenodo.7505426](https://doi.org/10.5281/zenodo.7505426)
+
+### Core Literature References:
+* **Jullien, N., Tedstone, A. J., Machguth, H., Karlsson, N. B., & Helm, V. (2023):** *Greenland Ice Slab Expansion and Thickening*, Geophysical Research Letters.
+* **MacFerrin, M., Machguth, H., van As, D., et al. (2019):** *Rapid expansion of Greenland's low-permeability ice slabs*, Nature.

@@ -53,12 +53,12 @@ To fully reproduce the findings, statistical metrics, and regional figures of th
 
 * **File:** `Moran_Approach1_MT_Karrer.ipynb`
 * **Methodology (Point-Based Context):** Implements the **Exact Approach** for data merging. It identifies the exact hydrology pixel for each individual ice slab measurement point $i$. To account for glaciological ice motion, the search window is expanded to a $7 \times 7$ pixel neighborhood (210 m x 210 m), extracting the maximum hydrology value from these 49 pixels into a new column called `hydrology_value_buffer`.
-* **Statistical Output:** Models localized spatial dependencies using a **Global and Local Bivariate Moran's I** framework (`Moran_Global_BV` / `Moran_Local_BV`). Spatial weight structures are constructed via a K-Nearest Neighbors ($k$-NN) matrix using an `sklearn.neighbors.BallTree` lookup. Significance is validated via **999 random spatial permutations** to classify grid cells into spatial clusters (High-High, High-Low, Low-High and Low-Low). Results are exported as vectorized GeoPackages (`.gpkg`).
+* **Statistical Output:** Models localized spatial dependencies using a **Global and Local Bivariate Moran's I** framework (`Moran_Global_BV` / `Moran_Local_BV`). Spatial weight structures are constructed using the **`libpysal`** library to build spatial weights based on localized coordinate configurations. Significance is validated via **999 random spatial permutations** to classify grid cells into spatial clusters (High-High, High-Low, Low-High and Low-Low). Results are exported as vectorized GeoPackages (`.gpkg`).
 
 ### Step 2: Spatial Grid Association & Autocorrelation (Mean Approach)
 * **File:** `Moran_Approach2_MT_Karrer.ipynb`
 * **Methodology (Regional Aggregation):** Implements the **Mean Approach** for data merging. For each ice slab measurement point $i$, a 1 km radius buffer is delineated. The script calculates the mean probability of surface meltwater occurrence and the mean ice slab thickness for all data points within this area (requiring a minimum threshold of $\ge 50$ points per buffer).
-* **Statistical Output:** Computes parametric and non-parametric correlations (Pearson/Spearman) and spatial dependencies on a regionally smoothed scale. Adds the aggregated columns `hydro_1km_mean` and `ice_1km_mean` to the dataset.
+* **Statistical Output:** Models localized spatial dependencies using a **Global and Local Bivariate Moran's I** framework (`Moran_Global_BV` / `Moran_Local_BV`). Spatial weight structures are constructed using the **`libpysal`** library to build spatial weights based on localized coordinate configurations. Significance is validated via **999 random spatial permutations** to classify grid cells into spatial clusters (High-High, High-Low, Low-High and Low-Low). Results are exported as vectorized GeoPackages (`.gpkg`).
 
 ### Step 3: Topographic and Ice Flow Direction Alignment Analysis
 * **File:** `Flow_Alignment_Analysis_MT_Karrer-Copy1.ipynb`

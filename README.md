@@ -62,13 +62,11 @@ To fully reproduce the findings, statistical metrics, and regional figures of th
 
 ### Step 3: Topographic and Ice Flow Direction Alignment Analysis
 * **File:** `Flow_Alignment_Analysis_MT_Karrer-Copy1.ipynb`
-* **Purpose:** Investigates whether the spatial hotspot clusters exhibit distinct ice flow physics.
-  * Calculates the absolute angular difference (in degrees) between ice flow velocity vectors and the maximum topographic slope direction derived from the ArcticDEM.
-* **Statistical Output:** Executes rigorous non-parametric comparative statistics to verify how the angular alignment varies across all four significant spatial categories: **High-High (Hotspots)**, **Low-Low (Coldspots)**, **High-Low (Outliers)**, and **Low-High (Outliers)**. It implements the **Mann-Whitney U Test** (to isolate shifts in medians) and the **Kolmogorov-Smirnov Test** (to evaluate variations in the cumulative distribution shapes) between the cluster types. Outputs are exported as comprehensive multi-cluster boxenplots and structured statistical median tables for all five study sectors (SW, CW, NW, NO, NE).
+* **Purpose:** Investigates whether the spatial clusters exhibit distinct ice flow physics.
+  * Calculates the absolute angular difference (in degrees) between ice flow direction and the topographic slope direction derived from the ArcticDEM.
+* **Statistical Output:** Executes statistics to verify how the angular alignment varies across all four significant spatial categories: **High-High**, **Low-Low**, **High-Low**, and **Low-High**. It implements the **Mann-Whitney U Test** (to isolate shifts in medians) and the **Kolmogorov-Smirnov Test** (to evaluate variations in the cumulative distribution shapes) between the cluster types. Outputs are exported as comprehensive multi-cluster boxplots.
 
 ### Step 4: Generalized Additive Modeling (GAM)
 * **File:** `GAM_Analysis_MT_Karrer.ipynb`
-* **Purpose:** Resolves the multi-variate, non-linear relationships driving ice slab thickness variations.
-  * Configures and trains a `LinearGAM` using a **Gaussian error distribution family** and an **identity link function**.
-  * Employs penalized B-spline smoothers to isolate the shape and magnitude of non-linear partial effects.
-  * Restricts training to the localized High-High spatial clusters to measure how much variance is explained by surface meltwater versus additional glaciological covariates (Elevation, Ice Velocity, Strain Rates, Flow Alignment), generating partial dependence plots with 95% confidence intervals.
+* **Purpose:** Implements and trains a `LinearGAM` framework using a **Gaussian error distribution family**.  Systematically tests individual relationships against ice slab thickness for five core variables: Surface Water Probability, Elevation, Flow Alignment, Ice Velocity, and Strain Rate.
+ * **Statistical Output:** Extracts the pseudo-$R^2$ metric to determine the proportion of variance explained in ice slab thickness by the covariates. Generates 2x2 grids of Partial Dependence Plots mapping the non-linear regression curves with 95% shaded confidence intervals.

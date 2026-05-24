@@ -64,7 +64,7 @@ To fully reproduce the findings, statistical metrics, and regional figures of th
 * **File:** `Flow_Alignment_Analysis_MT_Karrer-Copy1.ipynb`
 * **Purpose:** Investigates whether the spatial hotspot clusters exhibit distinct ice flow physics.
   * Calculates the absolute angular difference (in degrees) between ice flow velocity vectors and the maximum topographic slope direction derived from the ArcticDEM.
-  * Employs non-parametric distribution tests—specifically the **Mann-Whitney U Test** and the **Kolmogorov-Smirnov Test**—to verify if the alignment significantly shifts inside the High-High hotspots compared to the background ice sheet sectors.
+* **Statistical Output:** Executes rigorous non-parametric comparative statistics to verify how the angular alignment varies across all four significant spatial categories: **High-High (Hotspots)**, **Low-Low (Coldspots)**, **High-Low (Outliers)**, and **Low-High (Outliers)**. It implements the **Mann-Whitney U Test** (to isolate shifts in medians) and the **Kolmogorov-Smirnov Test** (to evaluate variations in the cumulative distribution shapes) between the cluster types. Outputs are exported as comprehensive multi-cluster boxenplots and structured statistical median tables for all five study sectors (SW, CW, NW, NO, NE).
 
 ### Step 4: Generalized Additive Modeling (GAM)
 * **File:** `GAM_Analysis_MT_Karrer.ipynb`

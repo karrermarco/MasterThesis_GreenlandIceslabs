@@ -1,4 +1,4 @@
-# Statistical Analysis of Ice Slabs, Surface Hydrology, and Ice Flow Alignment on the Greenland Ice Sheet
+# Investigating the Link between GreenlandFirn Structure and the Hydrological SurfaceNetwork
 
 This repository contains the complete computational workflow, data preprocessing pipelines, and spatial/non-spatial statistical models developed for the Master's Thesis: 
 "Investigating the Link between Greenland Firn Structure and the Hydrological Surface Network".

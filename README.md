@@ -89,9 +89,9 @@ pip install numpy pandas scipy matplotlib seaborn rasterio geopandas libpysal es
 
 To replicate the analysis, the source datasets must be acquired from the following official repositories:
 
-1. **Ice Slab Thickness:** The ice slab thickness measurements aquired across the five regional sectors (SW, CW, NW, NO, NE) can be downloaded on the data repository of Jullien et al. (2023). (https://doi.org/10.5281/zenodo.7505426)
+1. **Ice Slab Thickness:** The ice slab thickness measurements aquired across the five regional sectors (SW, CW, NW, NO, NE) can be downloaded on the data repository of Jullien et al. (2023) (https://doi.org/10.5281/zenodo.7505426).
   
-2. **Surface Hydrology Dataset (Tedstone 2022):** The surface hydrology map utilized for the thesis is built upon the multi-year mean surface meltwater occurrence. The data was made available by Tedstone and Machguth (2022).
+2. **Surface Hydrology Dataset (Tedstone 2022):** The surface hydrology map utilized for the thesis is built upon the multi-year mean surface meltwater occurrence. The data was made available by Tedstone and Machguth (2022) (https://doi.org/10.1038/s41558-022-01371-z).
 
 3. **ArcticDEM:** The ArcticDEM was derived to calculate the slope, which is the basis for the angular difference between ice flow and water flow direction. The ArcticDEM dataset is provided by the Polar Geospatial Center (PGC).
    * *Source Repository:* [https://www.pgc.umn.edu/data/arcticdem/](https://www.pgc.umn.edu/data/arcticdem/)

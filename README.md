@@ -92,7 +92,6 @@ To replicate the analysis, the source datasets must be acquired from the followi
 1. **Ice Slab Thickness:** The ice slab thickness measurements aquired across the five regional sectors (SW, CW, NW, NO, NE) can be downloaded on the data repository of Jullien et al. (2023). (https://doi.org/10.5281/zenodo.7505426)
   
 2. **Surface Hydrology Dataset (Tedstone 2022):** The surface hydrology map utilized for the thesis is built upon the multi-year mean surface meltwater occurrence. The data was made available by Tedstone and Machguth (2022).
-   * *Dataset Reference:* Tedstone, A. J. and Machguth, H. (2022). Increasing surface runoff from greenland’s firn areas. Nature Climate Change, 12(7):672–676.
 
 3. **ArcticDEM:** The angular difference layer is derived from the maximum topographic slope direction based on the ArcticDEM dataset provided by the Polar Geospatial Center (PGC).
    * *Source Repository:* [https://www.pgc.umn.edu/data/arcticdem/](https://www.pgc.umn.edu/data/arcticdem/)
@@ -107,5 +106,8 @@ To replicate the analysis, the source datasets must be acquired from the followi
 
 
 ### Core Literature References:
-* **Jullien, N., Tedstone, A. J., Machguth, H., Karlsson, N. B., & Helm, V. (2023):** *Greenland Ice Slab Expansion and Thickening*, Geophysical Research Letters.
+* **Jullien, N., Tedstone, A. J., Machguth, H., Karlsson, N. B., and Helm, V. (2023).** Greenland
+ice sheet ice slab expansion and thickening. Geophysical Research Letters, 50(10).
+* **Tedstone, A. J. and Machguth, H. (2022).** Increasing surface runoff from greenland’s firn
+areas. Nature Climate Change, 12(7):672–676.
 * **MacFerrin, M., Machguth, H., van As, D., et al. (2019):** *Rapid expansion of Greenland's low-permeability ice slabs*, Nature.

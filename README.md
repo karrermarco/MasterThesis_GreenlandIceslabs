@@ -18,13 +18,6 @@ The scripts rely on a standardized directory hierarchy to process the spatial da
 
 * **Important Note on Replicability:** Path adaptations are mandatory before running any code. You will need to adjust the absolute base paths (e.g., `C:/Masterarbeit/Daten Masterarbeit/...`) in the setup cells of each Jupyter Notebook to match your local file system.
 
-
-## 1. Project Structure & Directory Mapping
-
-The scripts rely on a standardized directory hierarchy to process the spatial datasets. 
-
-* **Important Note on Replicability:** Path adaptations are mandatory before running any code. You will need to adjust the absolute base paths (e.g., `C:/Masterarbeit/Daten Masterarbeit/...`) in the setup cells of each Jupyter Notebook to match your local file system.
-
 The tree below illustrates the required logical architecture.
 
 ```text
@@ -35,12 +28,17 @@ The tree below illustrates the required logical architecture.
 |-- Moran_Approach2_MT_Karrer.ipynb                 [Included]
 |
 |-- Datasets/                                       [Directory structure only - data excluded]
-|   |-- Greenland/ArcticDEM/deg_difference/
-|   |   `-- deg_difference100_python_Greenland.tif  [External Asset - Download via PGC required]
-|   `-- Ice Slab (Jullien)/Ice_Thickness_Greenland_Firn/
-|       `-- [Original Jullien CSV/Pickle Files]     [External Asset - Download via Zenodo required]
+    |-- Ice Slab (Jullien)/IceSlabs_20022018/IceSlabs_20022018/20102018/Ice_Thickness_Greenland_Firn/
+|       |-- Clipped CW/
+|       |-- Clipped NE/
+|       |-- Clipped NO/
+|       |-- Clipped NW/
+|       `-- Clipped SW/
+|           `-- Firnice_Thickness_SW_15km.shp       [External Asset - Jullien et al. (2023)]
+    |-- Greenland/
+|   |   `-- melting map/tedstone/master_hydrology_map_tedstone2022/
+|   |       `-- master_map_GrIS_mean.vrt                [External Asset - Tedstone et al. (2022)]
 |
 `-- Outputs/                                        [Empty directories - generated automatically]
     |-- Moran_Approach1/
     |-- Moran_Approach2/
-    `-- Plots Deg Difference/

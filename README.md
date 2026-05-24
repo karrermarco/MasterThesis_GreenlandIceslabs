@@ -33,12 +33,12 @@ The tree below illustrates the required logical architecture.
 |       |-- Clipped NE/
 |       |-- Clipped NO/
 |       |-- Clipped NW/
-|       `-- Clipped SW/
-|           `-- Firnice_Thickness_SW_15km.shp       [External Asset - Jullien et al. (2023)]
+|       |-- Clipped SW/
+|           |-- Firnice_Thickness_SW_15km.shp       [External Asset - Jullien et al. (2023)]
     |-- Greenland/
-|   |   `-- melting map/tedstone/master_hydrology_map_tedstone2022/
-|   |       `-- master_map_GrIS_mean.vrt                [External Asset - Tedstone et al. (2022)]
+|       |-- melting map/tedstone/master_hydrology_map_tedstone2022/
+|           |-- master_map_GrIS_mean.vrt                [External Asset - Tedstone et al. (2022)]
 |
-`-- Outputs/                                        [Empty directories - generated automatically]
+|-- Outputs/                                        [Empty directories - generated automatically]
     |-- Moran_Approach1/
     |-- Moran_Approach2/

@@ -93,12 +93,10 @@ To replicate the analysis, the source datasets must be acquired from the followi
   
 2. **Surface Hydrology Dataset (Tedstone 2022):** The surface hydrology map utilized for the thesis is built upon the multi-year mean surface meltwater occurrence. The data was made available by Tedstone and Machguth (2022) (https://doi.org/10.1038/s41558-022-01371-z).
 
-3. **ArcticDEM:** The ArcticDEM was derived to calculate the slope, which is the basis for the angular difference between ice flow and water flow direction. The ArcticDEM dataset is provided by the Polar Geospatial Center (PGC).
-(https://www.pgc.umn.edu/data/arcticdem/)
+3. **ArcticDEM:** The ArcticDEM was derived to calculate the slope, which is the basis for the angular difference between ice flow and water flow direction. The ArcticDEM dataset is provided by the Polar Geospatial Center (PGC)
+(https://www.pgc.umn.edu/data/arcticdem/).
  
-4. **Ice Flow Velocity and Strain Rate:** The surface velocity magnitude grids and derived tensor strain rates used as multivariate covariates are sourced from the satellite-derived ice velocity archives.
-   * *Source Repository:* National Snow and Ice Data Center (NSIDC) / MEaSUREs Greenland Ice Sheet Velocity Map Data.
-()
+4. **Ice Flow Velocity and Strain Rate:** The surface velocity magnitude was derived from the ITS_LIVE projct by NASA. The strian rate was calculated on based on the ice velocity data (https://its-live.jpl.nasa.gov/#datasets).
 
 
 ### Core Literature References:

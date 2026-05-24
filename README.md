@@ -42,3 +42,34 @@ The tree below illustrates the required logical architecture.
 |-- Outputs/                                        [Empty directories - generated automatically]
     |-- Moran_Approach1/
     |-- Moran_Approach2/
+
+
+---
+
+## 2. Computational Workflow & Execution Order
+
+To fully reproduce the findings, statistical metrics, and regional figures of the thesis, the Jupyter Notebooks must be executed in the following chronological sequence. The pipeline moves from exploratory data synchronization to spatial autocorrelation modeling, geographic alignment validation, and final multivariate non-linear regression.
+
+### Step 1: Spatial Grid Association & Exploratory Analysis
+* **File:** `Moran_Approach1_MT_Karrer.ipynb`
+* **Purpose:** Handles initial data loading, coordinate matching, and data cleaning across the regional subsets. It downscales the ice slab spatial fields, filters out invalid system noise, and performs initial global parametric and non-parametric correlation tests (Pearson and Spearman coefficients) between ice thickness variables and surface hydrology buffers.
+
+### Step 2: Localized Bivariate Spatial Autocorrelation
+* **File:** `Moran_Approach2_MT_Karrer.ipynb`
+* **Purpose:** Models spatial dependencies using a **Local Bivariate Moran's I** framework (`Moran_Local_BV`).
+  * Spatially lagged structures are computed via a K-Nearest Neighbors ($k$-NN) weight matrix using a fast geographic `sklearn.neighbors.BallTree` lookup.
+  * Conditional pseudo-$p$-values ($p_{sim}$) are derived via a stochastic engine running **999 random spatial permutations**.
+  * Classifies grid cells into statistically significant spatial clusters: **High-High (Hotspots)**, **Low-Low (Coldspots)**, spatial outliers (LH, HL), and non-significant domains. The results are exported as vectorized GeoPackages (`.gpkg`) for geospatial mapping in QGIS.
+
+### Step 3: Topographic and Ice Flow Direction Alignment Analysis
+* **File:** `Flow_Alignment_Analysis_MT_Karrer-Copy1.ipynb`
+* **Purpose:** Investigates whether the spatial hotspot clusters exhibit distinct ice flow physics.
+  * Calculates the absolute angular difference (in degrees) between ice flow velocity vectors and the maximum topographic slope direction derived from the ArcticDEM.
+  * Employs non-parametric distribution tests—specifically the **Mann-Whitney U Test** and the **Kolmogorov-Smirnov Test**—to verify if the alignment significantly shifts inside the High-High hotspots compared to the background ice sheet sectors.
+
+### Step 4: Generalized Additive Modeling (GAM)
+* **File:** `GAM_Analysis_MT_Karrer.ipynb`
+* **Purpose:** Resolves the multi-variate, non-linear relationships driving ice slab thickness variations.
+  * Configures and trains a `LinearGAM` using a **Gaussian error distribution family** and an **identity link function**.
+  * Employs penalized B-spline smoothers to isolate the shape and magnitude of non-linear partial effects.
+  * Restricts training to the localized High-High spatial clusters to measure how much variance is explained by surface meltwater versus additional glaciological covariates (Elevation, Ice Velocity, Strain Rates, Flow Alignment), generating partial dependence plots with 95% confidence intervals.

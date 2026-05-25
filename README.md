@@ -44,7 +44,7 @@ The tree below illustrates the required logical architecture.
     |-- Moran_Approach2/
 
 ```
-
+---
 ## 2. Computational Workflow & Execution Order
 
 To fully reproduce the findings, statistical metrics, and regional figures of the thesis, the Jupyter Notebooks must be executed in the following chronological sequence. The pipeline moves from exploratory data synchronization to spatial autocorrelation modeling, geographic alignment validation, and final multivariate non-linear regression.

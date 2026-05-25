@@ -100,12 +100,18 @@ To replicate the analysis, the source datasets must be acquired from the followi
 
 
 ### Core Literature References:
-
-
-
-### Core Literature References:
 * **Jullien, N., Tedstone, A. J., Machguth, H., Karlsson, N. B., and Helm, V. (2023).** Greenland
 ice sheet ice slab expansion and thickening. Geophysical Research Letters, 50(10).
 * **Tedstone, A. J. and Machguth, H. (2022).** Increasing surface runoff from greenland’s firn
 areas. Nature Climate Change, 12(7):672–676.
-* **MacFerrin, M., Machguth, H., van As, D., et al. (2019):** *Rapid expansion of Greenland's low-permeability ice slabs*, Nature.
+
+---
+
+## 5. License & Academic Citation
+
+This repository hosts code developed exclusively for academic research purposes as part of a Master's Thesis. 
+
+### Citation
+If you utilize this workflow or adapt the spatial preprocessing approaches (Mean/Exact) for further glaciological tracking, please cite this repository alongside the primary literature:
+```text
+Karrer, M. (2026). Statistical Analysis of Ice Slabs, Surface Hydrology, and Ice Flow Alignment on the Greenland Ice Sheet. GitHub Repository.

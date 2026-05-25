@@ -117,5 +117,5 @@ This repository hosts code developed exclusively for academic research purposes 
 
 This repository hosts the computational workflow and data processing scripts developed as part of a Master's Thesis. All code is available for academic and research purposes.
 
-* **Author:** M. Karrer (2026)
+* **Author:** Marco Karrer (2026)
 * **Master Thesis:** Investigating the Link between Greenland Firn Structure and the Hydrological Surface Network.

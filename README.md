@@ -107,12 +107,6 @@ areas. Nature Climate Change, 12(7):672–676.
 
 ---
 
-## 5. License & Academic Citation
-
-This repository hosts code developed exclusively for academic research purposes as part of a Master's Thesis. 
-
----
-
 ## 5. License & Contact
 
 This repository hosts the computational workflow and data processing scripts developed as part of a Master's Thesis. All code is available for academic and research purposes.

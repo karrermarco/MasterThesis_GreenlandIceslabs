@@ -111,7 +111,11 @@ areas. Nature Climate Change, 12(7):672–676.
 
 This repository hosts code developed exclusively for academic research purposes as part of a Master's Thesis. 
 
-### Citation
-If you utilize this workflow or adapt the spatial preprocessing approaches (Mean/Exact) for further glaciological tracking, please cite this repository alongside the primary literature:
-```text
-Karrer, M. (2026). Statistical Analysis of Ice Slabs, Surface Hydrology, and Ice Flow Alignment on the Greenland Ice Sheet. GitHub Repository.
+---
+
+## 5. License & Contact
+
+This repository hosts the computational workflow and data processing scripts developed as part of a Master's Thesis. All code is available for academic and research purposes.
+
+* **Author:** M. Karrer (2026)
+* **Master Thesis:** Investigating the Link between Greenland Firn Structure and the Hydrological Surface Network.

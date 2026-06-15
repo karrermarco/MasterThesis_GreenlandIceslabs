@@ -96,7 +96,7 @@ To replicate the analysis, the source datasets must be acquired from the followi
 3. **ArcticDEM:** The ArcticDEM was derived to calculate the slope, which is the basis for the angular difference between ice flow and water flow direction. The ArcticDEM dataset is provided by the Polar Geospatial Center (PGC)
 (https://www.pgc.umn.edu/data/arcticdem/).
  
-4. **Ice Flow Velocity and Strain Rate:** The surface velocity magnitude was derived from the ITS_LIVE projct by NASA. The strian rate was calculated on based on the ice velocity data (https://its-live.jpl.nasa.gov/#datasets).
+4. **Ice Flow Velocity and Strain Rate:** The surface velocity magnitude was derived from the ITS_LIVE projct by NASA. The strian rate was calculated based on the ice velocity data (https://its-live.jpl.nasa.gov/#datasets).
 
 
 ### Core Literature References:
